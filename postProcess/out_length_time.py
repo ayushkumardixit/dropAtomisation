@@ -14,13 +14,13 @@ matplotlib.rcParams['text.usetex'] = True
 # matplotlib.rcParams['text.latex.preamble'] = [r'']
 
 def gettinglength(filename):
-    exe = ["./getlength", filename]
+    exe = ["./getlength_full_v2", filename]
     p = sp.Popen(exe, stdout=sp.PIPE, stderr=sp.PIPE)
     stdout, stderr = p.communicate()
     temp1 = stderr.decode("utf-8")
     temp2 = temp1.split("\n")
     temp3 = temp2[0].split(" ")
-    return float(temp3[0]), float(temp3[1]), float(temp3[2])
+    return float(temp3[0]), float(temp3[1]), float(temp3[2]), float(temp3[3]), float(temp3[4])
 # ----------------------------------------------------------------------------------------------------------------------
 
 nGFS = 5000
@@ -38,7 +38,7 @@ for ti in range(0, nGFS):
     if not os.path.exists(place):
         print("%s File not found!" % place)
     else:
-         ttemp, xmintemp, xmaxtemp = gettinglength(place)
+         ttemp, xmintemp, ymintemp, xmaxtemp, ymaxtemp = gettinglength(place)
          print(ttemp)
          ltemp = xmaxtemp-xmintemp
          print("The length of droplet is %f" % ltemp)
