@@ -14,7 +14,7 @@ matplotlib.rcParams['text.usetex'] = True
 # matplotlib.rcParams['text.latex.preamble'] = [r'']
 
 def gettinglength(filename):
-    exe = ["./getlength_full_v2", filename]
+    exe = ["./getlength_v2", filename]
     p = sp.Popen(exe, stdout=sp.PIPE, stderr=sp.PIPE)
     stdout, stderr = p.communicate()
     temp1 = stderr.decode("utf-8")

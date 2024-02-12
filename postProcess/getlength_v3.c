@@ -1,6 +1,6 @@
-// Title: getting bag length from simulation snapshot
+// Title: getting bag length from a 3d simulation snapshot
 
-#include "axi.h"
+#include "grid/octree.h"
 #include "navier-stokes/centered.h"
 #include "vof.h"
 #include "tag.h"
