@@ -16,9 +16,9 @@ Atomisation of axisymmetric viscoelastic drop
 
 #define tsnap (0.5) // 0.001 only for some cases. 
 // Error tolerancs
-#define fErr (1e-3)                                 // error tolerance in f1 VOF
-#define KErr (1e-6)                                 // error tolerance in VoF curvature calculated using heigh function method (see adapt event)
-#define VelErr (1e-3)                               // error tolerances in velocity -- Use 1e-2 for low Oh and 1e-3 to 5e-3 for high Oh/moderate to high J
+#define fErr (1e-2)                                 // error tolerance in f1 VOF
+#define KErr (1e-4)                                 // error tolerance in VoF curvature calculated using heigh function method (see adapt event)
+#define VelErr (1e-2)                               // error tolerances in velocity -- Use 1e-2 for low Oh and 1e-3 to 5e-3 for high Oh/moderate to high J
 #define AErr (1e-3)                             // error tolerances in conformation inside the liquid
 
 // boundary conditions
